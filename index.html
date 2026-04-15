@@ -1,186 +1,166 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicolas Instal - Servicii Profesionale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-    <title>Instalator Chișinău 24/7 | NicolaiInstal – Rapid și Profesionist</title>
+    body {
+      background: #0f172a;
+      color: white;
+    }
 
-    <meta name="description" content="Instalator Chișinău 24/7. Intervenții rapide în 30-60 min. Desfundare canalizare, reparații urgente, montaj boilere. Sună acum!">
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #111827;
+      position: sticky;
+      top: 0;
+    }
 
-    <meta name="keywords" content="instalator Chișinău, desfundare canalizare Chișinău, instalator urgent, instalator ieftin Chișinău">
+    header h1 {
+      color: #38bdf8;
+      font-size: 22px;
+    }
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: #f5f7fa;
-        }
+    nav a:hover {
+      color: #38bdf8;
+    }
 
-        header {
-            background: linear-gradient(135deg, #0077b6, #00b4d8);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      padding: 20px;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 34px;
-        }
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-        header p {
-            margin: 10px 0;
-            font-size: 18px;
-        }
+    .hero p {
+      font-size: 18px;
+      color: #cbd5e1;
+      max-width: 600px;
+    }
 
-        .cta {
-            margin-top: 20px;
-        }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-        section {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        .box {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
-        }
+    .section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
 
-        .highlight {
-            color: #0077b6;
-            font-weight: bold;
-        }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
 
-        /* GALERIE */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
 
-        .img-box {
-            overflow: hidden;
-            border-radius: 12px;
-        }
+    .card:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
 
-        .img-box img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      margin-top: 40px;
+    }
 
-        .img-box img:hover {
-            transform: scale(1.15);
-        }
-
-        /* BUTOANE */
-        .btn {
-            display: inline-block;
-            padding: 14px 20px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: white;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        .call { background: #28a745; }
-        .wa { background: #25D366; }
-
-        /* WHATSAPP FLOAT */
-        .floating {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 20px;
-            text-decoration: none;
-        }
-    </style>
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Instalator în Chișinău – Intervenții rapide 24/7</h1>
-    <p>Ajung în 30-60 minute • Preț corect • Lucrez curat</p>
+  <header>
+    <h1>Nicolas Instal</h1>
+    <nav>
+      <a href="#servicii">Servicii</a>
+      <a href="#despre">Despre</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <div class="cta">
-        <a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
-        <a class="btn wa" href="https://wa.me/37368129925">💬 WhatsApp</a>
+  <section class="hero">
+    <h2>Instalații Profesionale</h2>
+    <p>Oferim servicii de instalații sanitare, termice și electrice la standarde înalte de calitate.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contactează-ne</button>
+  </section>
+
+  <section id="servicii" class="section">
+    <h3>Serviciile noastre</h3>
+    <div class="services">
+      <div class="card">🔧 Instalații sanitare</div>
+      <div class="card">🔥 Instalații termice</div>
+      <div class="card">⚡ Instalații electrice</div>
+      <div class="card">🏠 Reparații generale</div>
     </div>
-</header>
+  </section>
 
-<section>
+  <section id="despre" class="section">
+    <h3>Despre noi</h3>
+    <p>Suntem o echipă de profesioniști dedicați calității și seriozității în fiecare proiect.</p>
+  </section>
 
-    <div class="box">
-        <h2>Despre mine</h2>
-        <p>Mă numesc <span class="highlight">Nicolai</span>, instalator în Chișinău cu peste <span class="highlight">5 ani experiență</span>.</p>
-        <p>Ofer servicii rapide, corecte și cu <span class="highlight">garanție</span> pentru fiecare lucrare.</p>
-    </div>
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <p>📞 Telefon: +373 XXX XXX XXX</p>
+    <p>📧 Email: contact@nicolasinstal.md</p>
+  </section>
 
-    <div class="box">
-        <h2>Servicii</h2>
-        <ul>
-            <li>✔️ Montaj instalații sanitare</li>
-            <li>✔️ Reparații urgente Chișinău</li>
-            <li>✔️ Desfundare canalizare Chișinău</li>
-            <li>✔️ Instalare boilere</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>De ce să mă alegi?</h2>
-        <ul>
-            <li>✔️ Ajung rapid în Chișinău</li>
-            <li>✔️ Experiență și seriozitate</li>
-            <li>✔️ Prețuri corecte</li>
-            <li>✔️ Lucrez curat și rapid</li>
-            <li>✔️ Garanție pentru lucrări</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>Galerie lucrări</h2>
-
-        <div class="gallery">
-            <div class="img-box"><img src="lucrare-1.jpg" alt="lucrare instalator Chișinău"></div>
-            <div class="img-box"><img src="lucrare-2.jpg" alt="reparație țeavă Chișinău"></div>
-            <div class="img-box"><img src="lucrare-3.jpg" alt="desfundare canalizare Chișinău"></div>
-        </div>
-    </div>
-
-    <div class="box">
-        <h2>Ce spun clienții</h2>
-        <p>⭐️⭐️⭐️⭐️⭐️ „A venit foarte repede și a rezolvat problema!”</p>
-        <p>⭐️⭐️⭐️⭐️⭐️ „Serios și profesionist, recomand!”</p>
-        <p>⭐️⭐️⭐️⭐️⭐️ „Preț corect și lucru de calitate!”</p>
-    </div>
-
-    <div class="box">
-        <h2>Contact rapid</h2>
-        <p>📍 Chișinău</p>
-        <p>📞 068129925</p>
-        <p><strong>Disponibil NON-STOP</strong></p>
-
-        <a class="btn call" href="tel:+37368129925">Sună acum</a>
-    </div>
-
-</section>
-
-<a class="floating" href="https://wa.me/37368129925">💬</a>
+  <footer>
+    <p>© 2026 Nicolas Instal. Toate drepturile rezervate.</p>
+  </footer>
 
 </body>
 </html>
