@@ -4,82 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>URGENT Instalator Chișinău 24/7 | Ajung în 30 min</title>
+<title>Instalator Chișinău 24/7 | Ajung în 30 min</title>
 <meta name="description" content="Instalator Chișinău urgent. Ajung în 30 minute. Sună acum!">
-<meta name="keywords" content="instalator Chisinau, instalator urgent Chisinau, reparatii tevi, desfundare canalizare Chisinau">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 body{margin:0;font-family:'Inter',sans-serif;background:#020617;color:#fff}
-
-h1{font-size:48px;margin-bottom:10px;font-weight:900;letter-spacing:1px}
-
-header p{font-size:18px;opacity:0.9}
-
 .container{max-width:1100px;margin:auto;padding:20px}
 
-header{
-background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('teava1.jpg') center/cover;
-padding:100px 20px;
-text-align:center
-}
+header{background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),url('teava1.jpg') center/cover;padding:100px 20px;text-align:center}
 
-.urgent{background:#ef4444;padding:10px;font-weight:800;border-radius:10px;display:inline-block;margin-bottom:15px;animation:pulse 1.2s infinite}
+h1{font-size:48px;font-weight:900}
 
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+.btn{display:inline-block;padding:18px 30px;border-radius:12px;font-weight:800;text-decoration:none;margin-top:15px}
+.call{background:#22c55e;color:#000}
 
-.btn{display:inline-block;padding:18px 30px;border-radius:12px;font-weight:800;text-decoration:none;margin-top:15px;font-size:18px;transition:0.2s}
+.card{background:#0f172a;padding:25px;border-radius:18px;margin:20px 0}
 
-.btn:hover{transform:scale(1.05)}
+/* slider */
+.slider{overflow:hidden;border-radius:18px}
+.slides{display:flex;transition:.4s}
+.slide{min-width:100%}
+.slide img{width:100%;height:400px;object-fit:cover}
 
-.call{background:#22c55e;color:#000;box-shadow:0 0 25px #22c55e}
-.whatsapp-btn{background:#25D366;color:#000}
+/* compare */
+.compare{position:relative;overflow:hidden;border-radius:18px;margin-top:20px}
+.compare img{width:100%;display:block}
+.overlay{position:absolute;top:0;left:0;width:50%;overflow:hidden}
+.line{position:absolute;top:0;left:50%;width:4px;height:100%;background:#fff}
 
-.card{
-background:linear-gradient(145deg,#0f172a,#020617);
-padding:25px;
-border-radius:20px;
-margin:20px 0;
-border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
+.call-scroll{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#22c55e;color:#000;padding:14px 22px;border-radius:50px;font-weight:900;display:none;z-index:9999;box-shadow:0 0 20px rgba(34,197,94,0.7)}
 
-.slider{overflow:hidden;border-radius:18px;position:relative}
-.slides{display:flex;transition:.4s ease}
-.slide{min-width:100%;position:relative}
-
-.slide img{
-width:100%;
-height:420px;
-object-fit:cover;
-transition:0.4s;
-}
-
-.slide img:hover{transform:scale(1.05)}
-
-img{max-width:100%;height:auto;display:block}
-
-.text-poza{position:absolute;bottom:15px;left:15px;background:rgba(0,0,0,0.7);padding:8px 12px;border-radius:10px;font-size:14px}
-
-.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);border:none;color:#fff;font-size:24px;padding:10px;cursor:pointer;border-radius:10px}
-.prev{left:10px}
-.next{right:10px}
-
-.call-fixed{position:fixed;bottom:0;left:0;width:100%;background:#22c55e;color:#000;text-align:center;padding:18px;font-weight:900;font-size:20px;z-index:9999}
-
-.badge-call{position:fixed;right:15px;bottom:90px;background:#ef4444;color:#fff;padding:14px 18px;border-radius:50px;font-weight:800;box-shadow:0 0 20px rgba(239,68,68,0.7);animation:pulse 1.2s infinite;z-index:9999;text-decoration:none}
-.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:10000}
-.lightbox img{max-width:90%;max-height:90%;border-radius:12px}
-.lightbox.active{display:flex}
-
-.label-before{position:absolute;top:10px;left:10px;background:#ef4444;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:800}
-.label-after{position:absolute;top:10px;left:10px;background:#22c55e;color:#000;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:800}
-
-.compare-container{position:relative;width:100%;max-width:800px;margin:auto;overflow:hidden;border-radius:18px}
-.compare-container img{width:100%;display:block}
-.compare-overlay{position:absolute;top:0;left:0;width:50%;height:100%;overflow:hidden}
-.compare-slider{position:absolute;top:0;left:50%;width:4px;height:100%;background:#fff;cursor:ew-resize;z-index:10}
+.call-scroll{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#22c55e;color:#000;padding:14px 22px;border-radius:50px;font-weight:900;display:none;z-index:9999;box-shadow:0 0 20px rgba(34,197,94,0.7)}
 
 </style>
 </head>
@@ -87,245 +44,124 @@ img{max-width:100%;height:auto;display:block}
 <body>
 
 <header>
-<div class="urgent">⚠️ DOAR AZI: Locuri limitate</div>
 <h1>Instalator Chișinău 24/7</h1>
-<p>Ajung în 30 minute și rezolv pe loc</p>
-
-<p style="font-size:22px;font-weight:800;color:#22c55e">✔️ Disponibil ACUM • Intervenții NON-STOP</p>
-
-<p style="font-size:20px;font-weight:800;color:#facc15">🔥 Sună acum – intervenție rapidă în 30 minute</p>
-
-<p>✔️ Peste 100+ lucrări realizate</p>
-<p>✔️ 5+ ani experiență</p>
-<p>✔️ Clienți mulțumiți în tot Chișinăul</p>
-
-<a class="btn call" href="tel:+37368129925">📞 SUNĂ ACUM – VIN IMEDIAT</a>
-<br>
-<a class="btn whatsapp-btn" href="https://wa.me/37368129925">💬 WhatsApp rapid</a>
-
-<p style="color:#ef4444;font-weight:800">⏳ Program încărcat – sună acum!</p>
-<p id="timer" style="font-size:22px;font-weight:900;color:#ef4444;margin-top:15px"></p>
+<p>Ajung rapid și rezolv pe loc</p>
+<a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
 </header>
 
 <div class="container">
 
 <div class="card">
-<h2>Instalator urgent în Chișinău – ajung rapid la tine</h2>
-<p>Ai o problemă cu instalația? Intervin rapid în Chișinău și rezolv pe loc majoritatea problemelor.</p>
-<ul>
-<li>Reparații țevi sparte</li>
-<li>Desfundare canalizare</li>
-<li>Montaj WC, chiuvetă, robinet</li>
-<li>Instalare boiler</li>
-<li>Remediere scurgeri apă</li>
-</ul>
+<h2>📸 Lucrări</h2>
+
+<div class="slider">
+<div class="slides" id="slides">
+
+<!-- DOAR poze simple -->
+<div class="slide"><img src="teava1.jpg"></div>
+<div class="slide"><img src="baie1.jpg"></div>
+<div class="slide"><img src="boiler1.jpg"></div>
+<div class="slide"><img src="reparatie1.jpg"></div>
+
+</div>
+</div>
+
 </div>
 
 <div class="card">
-<h2>📸 Lucrări reale</h2>
+<h2>🔧 Înainte / După</h2>
 
-<div class="compare-container" id="compare">
-  <img src="teava1.jpg" alt="inainte">
-  <div class="compare-overlay" id="overlay">
-    <img src="baie1.jpg" alt="dupa">
-  </div>
-  <div class="compare-slider" id="sliderLine"></div>
+<!-- comparatie 1 -->
+<div class="compare">
+<img src="lucrare1.jpg">
+<div class="overlay" id="ov1"><img src="lucrare2.jpg"></div>
+<div class="line" id="ln1"></div>
+</div>
+<p style="margin-top:8px;color:#22c55e;font-weight:700">✔️ Problemă rezolvată complet</p>
+
+<div class="review">
+<p>★★★★★</p>
+<p>„A venit rapid și a reparat perfect.”</p>
 </div>
 
-<p style="text-align:center;margin-top:10px">⬅️ Înainte | După ➡️</p>
+<!-- comparatie 2 -->
+<div class="compare">
+<img src="lucrare3.jpg">
+<div class="overlay" id="ov2"><img src="lucrare-2.jpg"></div>
+<div class="line" id="ln2"></div>
+</div>
+<p style="margin-top:8px;color:#22c55e;font-weight:700">✔️ Intervenție rapidă</p>
 
+<div class="review">
+<p>★★★★★</p>
+<p>„Foarte profesionist, recomand!”</p>
 </div>
 
 </div>
 
-<div class="slide">
-  <img src="baie1.jpg" alt="baie1" loading="lazy">
-  <div class="label-after">După</div>
-  <div class="badge">🔧 Montaj profesional</div>
-  <div class="text-poza">baie1.jpg</div>
-</div>
-  <div class="text-poza">teava1.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="baie1.jpg" alt="baie1" loading="lazy">
-  <div class="badge">🔧 Montaj profesional</div>
-  <div class="text-poza">baie1.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="boiler1.jpg" alt="boiler1" loading="lazy">
-  <div class="badge">⚡ Intervenție rapidă</div>
-  <div class="text-poza">boiler1.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="reparatie1.jpg" alt="reparatie1" loading="lazy">
-  <div class="badge">🛠️ Rezolvat pe loc</div>
-  <div class="text-poza">reparatie1.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="lucrare1.jpg" alt="lucrare1" loading="lazy">
-  <div class="badge">✔️ Lucrare reală</div>
-  <div class="text-poza">lucrare1.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="lucrare2.jpg" alt="lucrare2" loading="lazy">
-  <div class="badge">💧 Fără scurgeri</div>
-  <div class="text-poza">lucrare2.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="lucrare3.jpg" alt="lucrare3" loading="lazy">
-  <div class="badge">🔧 Montaj corect</div>
-  <div class="text-poza">lucrare3.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="lucrare-2.jpg" alt="lucrare-2" loading="lazy">
-  <div class="badge">⚡ Rapid</div>
-  <div class="text-poza">lucrare-2.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="lucrare-3.jpg" alt="lucrare-3" loading="lazy">
-  <div class="badge">🛠️ Profesional</div>
-  <div class="text-poza">lucrare-3.jpg</div>
-</div>
-
-<div class="slide">
-  <img src="lucrare-4.jpg" alt="lucrare-4" loading="lazy">
-  <div class="badge">✔️ Finalizat</div>
-  <div class="text-poza">lucrare-4.jpg</div>
-</div>
-
-</div></div>
-<div class="slide"><img src="baie1.jpg" alt="baie1"><div class="text-poza">baie1.jpg</div></div>
-<div class="slide"><img src="boiler1.jpg" alt="boiler1"><div class="text-poza">boiler1.jpg</div></div>
-<div class="slide"><img src="reparatie1.jpg" alt="reparatie1"><div class="text-poza">reparatie1.jpg</div></div>
-
-<div class="slide"><img src="lucrare1.jpg" alt="lucrare1"><div class="text-poza">lucrare1.jpg</div></div>
-<div class="slide"><img src="lucrare2.jpg" alt="lucrare2"><div class="text-poza">lucrare2.jpg</div></div>
-<div class="slide"><img src="lucrare3.jpg" alt="lucrare3"><div class="text-poza">lucrare3.jpg</div></div>
-<div class="slide"><img src="lucrare-2.jpg" alt="lucrare-2"><div class="text-poza">lucrare-2.jpg</div></div>
-<div class="slide"><img src="lucrare-3.jpg" alt="lucrare-3"><div class="text-poza">lucrare-3.jpg</div></div>
-<div class="slide"><img src="lucrare-4.jpg" alt="lucrare-4"><div class="text-poza">lucrare-4.jpg</div></div>
-
-</div></div>
-<div class="slide"><img src="baie1.jpg" alt="Baie finalizată" loading="lazy"><div class="text-poza">Baie finalizată</div></div>
-<div class="slide"><img src="boiler1.jpg" alt="Montaj corect" loading="lazy"><div class="text-poza">Montaj corect</div></div>
-<div class="slide"><img src="reparatie1.jpg" alt="Intervenție rapidă" loading="lazy"><div class="text-poza">Intervenție rapidă</div></div>
-
-</div>
+<!-- comparatie 2 -->
+<div class="compare">
+<img src="lucrare3.jpg">
+<div class="overlay" id="ov2"><img src="lucrare-2.jpg"></div>
+<div class="line" id="ln2"></div>
 </div>
 
 </div>
 
 </div>
-
-<a href="tel:+37368129925" class="call-fixed">📞 SUNĂ ACUM – 068129925</a>
-<a href="tel:+37368129925" class="badge-call">📞 Sună rapid</a>
 
 <script>
-let index=0;
+// slider
+let i=0;
 const slides=document.getElementById('slides');
 const total=slides.children.length;
+setInterval(()=>{i=(i+1)%total;slides.style.transform=`translateX(-${i*100}%)`},3000);
 
-function showSlide(){slides.style.transform=`translateX(-${index*100}%)`}
-function nextSlide(){index=(index+1)%total;showSlide()}
-function prevSlide(){index=(index-1+total)%total;showSlide()}
-setInterval(nextSlide,4000);
-
-let startX=0;
-const slider=document.getElementById('slider');
-slider.addEventListener('touchstart',e=>{startX=e.touches[0].clientX});
-slider.addEventListener('touchend',e=>{
-let endX=e.changedTouches[0].clientX;
-if(startX-endX>50) nextSlide();
-if(endX-startX>50) prevSlide();
-});
-
-// slider comparatie
-const sliderLine=document.getElementById('sliderLine');
-const overlay=document.getElementById('overlay');
-let isDown=false;
-
-sliderLine.addEventListener('mousedown',()=>isDown=true);
-document.addEventListener('mouseup',()=>isDown=false);
+// compare function
+function initCompare(overlay,line){
+let down=false;
+line.addEventListener('mousedown',()=>down=true);
+document.addEventListener('mouseup',()=>down=false);
 document.addEventListener('mousemove',e=>{
-if(!isDown) return;
+if(!down) return;
 let rect=overlay.parentElement.getBoundingClientRect();
 let x=e.clientX-rect.left;
-let percent=(x/rect.width)*100;
-overlay.style.width=percent+'%';
-sliderLine.style.left=percent+'%';
+let p=(x/rect.width)*100;
+overlay.style.width=p+'%';
+line.style.left=p+'%';
 });
-
-sliderLine.addEventListener('touchstart',()=>isDown=true);
-document.addEventListener('touchend',()=>isDown=false);
-document.addEventListener('touchmove',e=>{
-if(!isDown) return;
-let rect=overlay.parentElement.getBoundingClientRect();
-let x=e.touches[0].clientX-rect.left;
-let percent=(x/rect.width)*100;
-overlay.style.width=percent+'%';
-sliderLine.style.left=percent+'%';
-});
-
-// timer oferta
-function startTimer(){
-let time=600; // 10 minute
-const timerEl=document.getElementById('timer');
-
-setInterval(()=>{
-let min=Math.floor(time/60);
-let sec=time%60;
-sec=sec<10?'0'+sec:sec;
-
-timerEl.innerText=`⏳ Ofertă limitată: ${min}:${sec}`;
-
-if(time>0) time--;
-},1000);
 }
 
-startTimer();
-
-// SEO Schema
-const script=document.createElement('script');
-script.type='application/ld+json';
-script.text=JSON.stringify({
-"@context":"https://schema.org",
-"@type":"LocalBusiness",
-"name":"Instalator Chișinău 24/7",
-"telephone":"+37368129925",
-"areaServed":"Chișinău",
-"openingHours":"Mo-Su 00:00-23:59"
-});
-document.head.appendChild(script);
+initCompare(document.getElementById('ov1'),document.getElementById('ln1'));
+initCompare(document.getElementById('ov2'),document.getElementById('ln2'));
 </script>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="">
-</div>
+<a href="tel:+37368129925" class="call-scroll" id="callScroll">📞 Sună acum rapid</a>
 
 <script>
-// lightbox
-const images=document.querySelectorAll('.slide img');
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightbox-img');
+const callScroll=document.getElementById('callScroll');
 
-images.forEach(img=>{
-  img.addEventListener('click',()=>{
-    lightbox.classList.add('active');
-    lightboxImg.src=img.src;
-  });
-});
-
-function closeLightbox(){
-  lightbox.classList.remove('active');
+window.addEventListener('scroll',()=>{
+if(window.scrollY>300){
+callScroll.style.display='block';
+}else{
+callScroll.style.display='none';
 }
+});
+</script>
+
+<a href="tel:+37368129925" class="call-scroll" id="callScroll">📞 Sună acum rapid</a>
+
+<script>
+const callScroll=document.getElementById('callScroll');
+
+window.addEventListener('scroll',()=>{
+if(window.scrollY>300){
+callScroll.style.display='block';
+}else{
+callScroll.style.display='none';
+}
+});
 </script>
 
 </body>
