@@ -4,75 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Instalator Chișinău  | Ajung în 30 min | Reparații urgente</title>
-<meta name="description" content="Instalator Chișinău. Ajung rapid în 30-60 minute. Reparații urgente, desfundare canalizare, montaj boilere.">
+<title>Instalator Chișinău 24/7 | Ajung în 30 min | Reparații urgente</title>
+<meta name="description" content="Instalator Chișinău. Intervenții rapide 24/7. Ajung în 30-60 minute.">
 <meta name="robots" content="index, follow">
-<meta name="keywords" content="instalator Chișinău, instalator urgent Chișinău, desfundare canalizare Chișinău">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:'Inter',sans-serif;background:#0b1220;color:#e5e7eb}
-header{background:linear-gradient(135deg,#0284c7,#1e3a8a);padding:80px 20px;text-align:center}
-h1{font-size:42px;margin:0}
+body{margin:0;font-family:'Inter',sans-serif;background:linear-gradient(135deg,#020617,#0f172a,#020617);color:#e5e7eb}
+
+header{background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),url('teava1.jpg') center/cover;padding:120px 20px;text-align:center}
+
+h1{font-size:48px;margin:0}
+p{line-height:1.6}
+
 .container{max-width:1100px;margin:auto;padding:20px}
 
-.card{background:#0f172a;border-radius:20px;padding:28px;margin-bottom:25px;box-shadow:0 15px 40px rgba(0,0,0,.5)}
+.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-radius:20px;padding:28px;margin-bottom:25px;border:1px solid rgba(255,255,255,0.1);opacity:0;transform:translateY(40px);transition:.6s}
+.card.show{opacity:1;transform:translateY(0)}
 
-.btn{display:inline-block;padding:16px 26px;border-radius:12px;text-decoration:none;font-weight:700;margin:10px}
-.call{background:#22c55e;color:#000}
-.wa{background:#25D366;color:#000}
+.btn{display:inline-block;padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:700;margin:10px}
+.call{background:#22c55e;color:#000;box-shadow:0 0 20px #22c55e}
 
 .slider{overflow:hidden;border-radius:18px}
-.slides{display:flex;transition:0.5s}
+.slides{display:flex;transition:.5s}
 .slide{min-width:100%}
-.slide img{width:100%;height:400px;object-fit:cover}
+.slide img{width:100%;height:400px;object-fit:cover;transition:.5s}
+.slide:hover img{transform:scale(1.1)}
 
-.review{background:#020617;padding:15px;border-radius:10px;margin-top:10px}
+.call-fixed{position:fixed;bottom:0;left:0;width:100%;background:#22c55e;color:#000;text-align:center;padding:18px;font-size:20px;font-weight:800;text-decoration:none;z-index:9999}
 
-/* BUTON FIX */
-.call-fixed{
+.whatsapp{position:fixed;bottom:90px;right:20px;background:#25D366;padding:15px;border-radius:50%;font-size:22px;text-decoration:none;color:#000;z-index:9999}
+
+/* NOTIFICARE FAKE */
+.notification{
 position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#22c55e;
-color:#000;
-text-align:center;
-padding:18px;
-font-size:20px;
-font-weight:800;
-text-decoration:none;
-z-index:9999;
+bottom:140px;
+left:20px;
+background:#020617;
+padding:12px 18px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,.6);
+font-size:14px;
+opacity:0;
+transition:.5s;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp{
-position:fixed;
-bottom:80px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none;
-z-index:9999;
-color:#000;
-}
+.notification.show{opacity:1}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Instalator Chișinău</h1>
-<p>Ajung în 30-60 minute • Intervenții urgente </p>
-
+<h1>Instalator Chișinău 24/7</h1>
+<p>Ajung în 30 minute • Intervenții urgente NON-STOP</p>
+<p style="color:#22c55e;font-weight:700;">✔️ Sună acum și rezolv rapid problema</p>
+<p style="color:#facc15;">⚠️ Intervenții limitate pe zi – sună acum</p>
 <a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
-
-<a class="btn wa" href="https://wa.me/37368129925?text=Salut%20am%20nevoie%20de%20instalator">
-💬 WhatsApp +37368129925
-</a>
 </header>
 
 <div class="container">
@@ -81,67 +71,71 @@ color:#000;
 <h2>Lucrări reale</h2>
 <div class="slider">
 <div class="slides" id="slides">
-
-<div class="slide">
-<img src="teava1.jpg" alt="instalator Chișinău țevi">
-</div>
-
-<div class="slide">
-<img src="baie1.jpg" alt="instalație baie Chișinău">
-</div>
-
-<div class="slide">
-<img src="boiler1.jpg" alt="montaj boiler Chișinău">
-</div>
-
-<div class="slide">
-<img src="reparatie1.jpg" alt="reparații instalații Chișinău">
-</div>
-
+<div class="slide"><img src="teava1.jpg"></div>
+<div class="slide"><img src="baie1.jpg"></div>
+<div class="slide"><img src="boiler1.jpg"></div>
+<div class="slide"><img src="reparatie1.jpg"></div>
 </div>
 </div>
+<a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
 </div>
 
 <div class="card">
-<h2>Recenzii</h2>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Ion – A venit rapid, profesionist</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Andrei – Lucrare curată</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Maria – Recomand</div>
+<h2>De ce mă aleg clienții</h2>
+<p>✔️ Ajung rapid în 30–60 minute</p>
+<p>✔️ 100+ lucrări finalizate</p>
+<p>✔️ Lucrez curat și organizat</p>
+<p>✔️ Garanție pentru fiecare lucrare</p>
+<a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
 </div>
 
 <div class="card">
 <h2>Instalator Chișinău – intervenții rapide</h2>
-<p>Ofer servicii profesionale de instalator în Chișinău, disponibile . Ajung rapid în 30–60 minute pentru orice problemă urgentă.</p>
-<p>Execut lucrări de desfundare canalizare, reparații țevi, montaj instalații și instalare boilere.</p>
+<p>Servicii profesionale 24/7 pentru orice problemă urgentă.</p>
+<p>Desfundare canalizare, reparații țevi, montaj instalații și boilere.</p>
+<a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
 </div>
 
 <div class="card" style="text-align:center">
-<h2>Contact</h2>
-<p>📞 +37368129925</p>
-<a class="btn call" href="tel:+37368129925">Sună acum</a>
+<h2>Ai o problemă? Nu aștepta!</h2>
+<p>Intervin rapid oriunde în Chișinău</p>
+<a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
 </div>
 
 </div>
 
-<!-- BUTON FIX -->
-<a href="tel:+37368129925" class="call-fixed">
-📞 Sună ACUM – +37368129925
-</a>
+<!-- NOTIFICARE -->
+<div class="notification" id="notif">
+📞 Cineva din Botanica a sunat acum 2 minute
+</div>
 
-<!-- WHATSAPP +37368129925-->
-<a href="https://wa.me/37368129925?text=Salut%20am%20nevoie%20de%20instalator" class="whatsapp">
-💬+37368129925
-</a>
+<a href="tel:+37368129925" class="call-fixed">📞 Sună ACUM – 068129925</a>
+<a href="https://wa.me/37368129925?text=Salut%20am%20nevoie%20de%20instalator" class="whatsapp">💬+37368129925</a>
 
 <script>
 let index=0;
 const slides=document.getElementById('slides');
 const total=slides.children.length;
-
 setInterval(()=>{
 index=(index+1)%total;
 slides.style.transform=`translateX(-${index*100}%)`;
 },4000);
+
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+if(card.getBoundingClientRect().top<window.innerHeight-100){
+card.classList.add('show');
+}
+});
+});
+
+// NOTIFICARE FAKE LOOP
+const notif=document.getElementById('notif');
+setInterval(()=>{
+notif.classList.add('show');
+setTimeout(()=>notif.classList.remove('show'),3000);
+},6000);
 </script>
 
 </body>
