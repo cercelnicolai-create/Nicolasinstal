@@ -1,127 +1,118 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicolas Instal - Servicii Profesionale</title>
-  <style>
-    * {margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-    body {background:#0f172a;color:white;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalator Chișinău 24/7 | Ajung în 30 min | Nicolai</title>
+<meta name="description" content="Instalator Chișinău. Ajung rapid în 30-60 minute. Reparații urgente, desfundare canalizare, montaj boilere.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      display:flex;justify-content:space-between;align-items:center;
-      padding:20px 50px;background:#111827;position:sticky;top:0;
-    }
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#0b1220;color:#e5e7eb}
+header{background:url('teava1.jpg') center/cover no-repeat;position:relative;padding:120px 20px;text-align:center}
+header::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.7),rgba(0,0,0,.9))}
+header *{position:relative;z-index:2}
+h1{font-size:48px;margin:0;font-weight:700}
+.subtitle{font-size:20px;margin-top:10px}
+.badges{margin-top:15px;font-size:14px;opacity:.9}
+.container{max-width:1100px;margin:auto;padding:20px}
+.card{background:#0f172a;border-radius:20px;padding:28px;margin-bottom:25px;box-shadow:0 20px 50px rgba(0,0,0,.6);opacity:0;transform:translateY(50px);transition:.7s}
+.card.show{opacity:1;transform:translateY(0)}
+.btn{display:inline-block;padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:700;margin:10px 5px}
+.call{background:#22c55e;color:#000}
 
-    header h1 {color:#38bdf8;font-size:22px;}
+/* GRID SERVICII */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.service{background:#020617;padding:15px;border-radius:12px;text-align:center}
 
-    nav a {color:white;margin-left:20px;text-decoration:none;}
-    nav a:hover {color:#38bdf8;}
+/* SLIDER */
+.slider{position:relative;overflow:hidden;border-radius:18px}
+.slides{display:flex;transition:transform .6s ease}
+.slide{min-width:100%;position:relative}
+.slide img{width:100%;height:420px;object-fit:cover;transition:.5s}
+.slide:hover img{transform:scale(1.08)}
+.overlay{position:absolute;bottom:0;left:0;width:100%;padding:20px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent)}
 
-    .hero {
-      height:90vh;display:flex;flex-direction:column;
-      justify-content:center;align-items:center;text-align:center;
-      background:linear-gradient(to right,#0f172a,#1e293b);
-      padding:20px;
-    }
+.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:none;color:#fff;font-size:24px;padding:10px;border-radius:50%}
+.prev{left:10px}.next{right:10px}
 
-    .hero h2 {font-size:42px;margin-bottom:15px;}
-    .hero p {font-size:18px;color:#cbd5e1;max-width:600px;}
+/* CTA FIX */
+.call-fixed{position:fixed;bottom:0;left:0;width:100%;background:#22c55e;color:#000;text-align:center;padding:16px;font-weight:800;text-decoration:none;font-size:18px}
 
-    .btn {
-      margin-top:20px;padding:12px 25px;
-      background:#38bdf8;color:black;border:none;
-      border-radius:8px;cursor:pointer;font-weight:bold;
-    }
+/* HOVER CARDS */
+.service:hover{transform:translateY(-5px);transition:.3s}
 
-    .section {padding:60px 20px;text-align:center;}
-    .section h3 {font-size:28px;margin-bottom:20px;color:#38bdf8;}
-
-    .services {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      padding:20px;
-    }
-
-    .card {
-      background:#1e293b;
-      padding:20px;
-      border-radius:12px;
-      transition:0.3s;
-    }
-
-    .card:hover {transform:translateY(-5px);background:#334155;}
-
-    /* GALERIE FOTO */
-    .gallery {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:15px;
-      padding:20px;
-    }
-
-    .gallery img {
-      width:100%;
-      height:200px;
-      object-fit:cover;
-      border-radius:12px;
-      transition:0.3s;
-    }
-
-    .gallery img:hover {transform:scale(1.05);}
-
-    footer {text-align:center;padding:20px;background:#111827;margin-top:40px;}
-
-  </style>
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Nicolas Instal</h1>
-  <nav>
-    <a href="#servicii">Servicii</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>Instalator Chișinău</h1>
+<div class="subtitle">Ajung în 30 minute • Intervenții urgente 24/7</div>
+<div class="badges">✔️ 100+ clienți • ✔️ 5★ rating • ✔️ Garanție</div>
+<a class="btn call" href="tel:+37368129925">📞 Sună acum</a>
 </header>
 
-<section class="hero">
-  <h2>Instalații Profesionale</h2>
-  <p>Oferim servicii de instalații sanitare la standarde înalte de calitate.</p>
-  <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contactează-ne</button>
-</section>
+<div class="container">
 
-<section id="servicii" class="section">
-  <h3>Serviciile noastre</h3>
-  <div class="services">
-    <div class="card">🔧 Instalații sanitare</div>
-    <div class="card">🔥 Instalații termice</div>
-    <div class="card">🔥 Instalații de ventilare</div>
-  </div>
-</section>
+<div class="card">
+<h2>Lucrări reale</h2>
+<div class="slider">
+<div class="slides" id="slides">
+<div class="slide"><img src="teava1.jpg"><div class="overlay">Distribuitor profesional</div></div>
+<div class="slide"><img src="baie1.jpg"><div class="overlay">Instalație baie</div></div>
+<div class="slide"><img src="boiler1.jpg"><div class="overlay">Montaj boiler</div></div>
+<div class="slide"><img src="reparatie1.jpg"><div class="overlay">Sistem complet</div></div>
+</div>
+<button class="nav prev" onclick="moveSlide(-1)">❮</button>
+<button class="nav next" onclick="moveSlide(1)">❯</button>
+</div>
+</div>
 
-<section id="galerie" class="section">
-  <h3>Galerie lucrări</h3>
-  <div class="gallery">
-    <img src="img/lucru1.jpg" alt="lucrare-1" />
-    <img src="img/lucru2.jpg" alt="lucrare-2" />
-    <img src="img/lucru3.jpg" alt="lucrare-3" />
-  
-  </div>
-</section>
+<div class="card">
+<h2>Servicii</h2>
+<div class="services">
+<div class="service">Reparații urgente</div>
+<div class="service">Desfundare canalizare</div>
+<div class="service">Montaj instalații</div>
+<div class="service">Instalare boilere</div>
+</div>
+</div>
 
-<section id="contact" class="section">
-  <h3>Contact</h3>
-  <p>📞 Telefon: +373 68 12 99 25 </p>
-  <p>📧 Email: nicolasinstal26@gmail.com </p>
-  <p>📞 WhatsApp: +373 68 12 99 25 </p>
-</section>
+<div class="card">
+<h2>De ce să mă alegi</h2>
+<p>✔️ Ajung rapid în Chișinău și suburbii</p>
+<p>✔️ Lucrez curat și organizat</p>
+<p>✔️ Garanție pentru lucrări</p>
+<p>✔️ Experiență reală pe șantier</p>
+</div>
 
-<footer>
-  <p>© 2026 Nicolas Instal. Toate drepturile rezervate.</p>
-</footer>
+<div class="card">
+<h2>Contact rapid</h2>
+<p>📞 068129925</p>
+<a class="btn call" href="tel:+37368129925">Sună acum</a>
+</div>
+
+</div>
+
+<a href="tel:+37368129925" class="call-fixed">📞 Sună acum</a>
+
+<script>
+let index=0;
+const slides=document.getElementById('slides');
+const total=slides.children.length;
+function moveSlide(step){index=(index+step+total)%total;slides.style.transform=`translateX(-${index*100}%)`;}
+setInterval(()=>moveSlide(1),4000);
+
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+if(top<window.innerHeight-100){card.classList.add('show');}
+});
+});
+</script>
 
 </body>
 </html>
-
