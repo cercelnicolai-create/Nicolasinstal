@@ -12,7 +12,11 @@
 
 <style>
 body{margin:0;font-family:'Inter',sans-serif;background:#020617;color:#fff}
-h1{font-size:42px;margin-bottom:10px}
+
+h1{font-size:48px;margin-bottom:10px;font-weight:900;letter-spacing:1px}
+
+header p{font-size:18px;opacity:0.9}
+
 .container{max-width:1100px;margin:auto;padding:20px}
 
 header{
@@ -25,16 +29,34 @@ text-align:center
 
 @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
 
-.btn{display:inline-block;padding:18px 30px;border-radius:12px;font-weight:800;text-decoration:none;margin-top:15px;font-size:18px}
+.btn{display:inline-block;padding:18px 30px;border-radius:12px;font-weight:800;text-decoration:none;margin-top:15px;font-size:18px;transition:0.2s}
+
+.btn:hover{transform:scale(1.05)}
+
 .call{background:#22c55e;color:#000;box-shadow:0 0 25px #22c55e}
 .whatsapp-btn{background:#25D366;color:#000}
 
-.card{background:#0f172a;padding:25px;border-radius:18px;margin:20px 0;border:1px solid rgba(255,255,255,0.1)}
+.card{
+background:linear-gradient(145deg,#0f172a,#020617);
+padding:25px;
+border-radius:20px;
+margin:20px 0;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
 
 .slider{overflow:hidden;border-radius:18px;position:relative}
 .slides{display:flex;transition:.4s ease}
 .slide{min-width:100%;position:relative}
-.slide img{width:100%;height:420px;object-fit:cover}
+
+.slide img{
+width:100%;
+height:420px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.slide img:hover{transform:scale(1.05)}
 
 img{max-width:100%;height:auto;display:block}
 
@@ -56,6 +78,8 @@ img{max-width:100%;height:auto;display:block}
 <div class="urgent">⚠️ DOAR AZI: Locuri limitate</div>
 <h1>Instalator Chișinău 24/7</h1>
 <p>Ajung în 30 minute și rezolv pe loc</p>
+
+<p style="font-size:22px;font-weight:800;color:#22c55e">✔️ Disponibil ACUM • Intervenții NON-STOP</p>
 
 <p style="font-size:20px;font-weight:800;color:#facc15">🔥 Sună acum – intervenție rapidă în 30 minute</p>
 
