@@ -4,148 +4,253 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Instalator Chișinău 24/7 • Intervenții rapide</title>
-<meta name="description" content="Instalator Chișinău 24/7. Intervenții rapide 30–60 min. Prețuri corecte, fără surprize.">
+<title>Instalator Chișinău 24/7 • Ajung rapid</title>
+<meta name="description" content="Instalator Chișinău 24/7. Ajung în 30–60 min. Reparații, desfundare țevi, montaj boiler. Sună acum!">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#020617;--card:#0f172a;--green:#22c55e;--muted:#94a3b8}
-body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:#e5e7eb}
-
-/* HERO */
-.hero{
-min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),url('lucrare6.jpg') center/cover;
+:root{
+--bg:#020617;
+--green:#22c55e;
+--card:#0f172a;
 }
-h1{font-size:48px}
-.btn{background:var(--green);color:#000;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:700;margin-top:20px}
-.phone{color:var(--green);font-size:22px;margin-top:10px}
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:#e5e7eb;
+overflow-x:hidden;
+}
+
+/* HERO PRO */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+/* imagine animata */
+.hero::before{
+content:"";
+position:absolute;
+width:120%;
+height:120%;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),
+url('hero.jpg') center/cover no-repeat;
+animation:zoom 18s ease-in-out infinite alternate;
+z-index:-2;
+}
+
+/* glow */
+.hero::after{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#22c55e55,transparent 70%);
+top:-100px;
+left:-100px;
+filter:blur(120px);
+animation:float 10s infinite alternate;
+z-index:-1;
+}
+
+@keyframes zoom{
+from{transform:scale(1)}
+to{transform:scale(1.1)}
+}
+
+@keyframes float{
+from{transform:translate(0,0)}
+to{transform:translate(80px,60px)}
+}
+
+/* TEXT */
+.hero h1{
+font-size:56px;
+max-width:800px;
+line-height:1.2;
+animation:fadeUp .8s ease forwards;
+}
+
+.hero p{
+font-size:20px;
+opacity:.9;
+margin-top:10px;
+animation:fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* CTA */
+.btn{
+background:var(--green);
+color:#000;
+padding:18px 34px;
+border-radius:14px;
+font-weight:800;
+text-decoration:none;
+margin-top:25px;
+display:inline-block;
+box-shadow:0 0 30px rgba(34,197,94,.5);
+transition:.25s;
+animation:fadeUp 1.4s ease forwards;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* whatsapp */
+.btn2{
+margin-top:10px;
+display:inline-block;
+padding:12px 22px;
+border-radius:12px;
+background:#25D366;
+color:#000;
+font-weight:700;
+text-decoration:none;
+animation:fadeUp 1.6s ease forwards;
+}
+
+/* phone */
+.phone{
+margin-top:10px;
+font-size:24px;
+color:var(--green);
+font-weight:800;
+animation:fadeUp 1.8s ease forwards;
+}
+
+/* trust */
+.trust{
+margin-top:10px;
+color:#22c55e;
+font-weight:700;
+animation:fadeUp 2s ease forwards;
+}
+
+/* FLOAT BTN */
+.call{
+position:fixed;
+right:20px;
+bottom:20px;
+background:var(--green);
+color:#000;
+padding:14px;
+border-radius:12px;
+text-decoration:none;
+font-weight:800;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:80px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+text-decoration:none;
+}
+
+/* POPUP */
+#popup{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:var(--green);
+color:#000;
+text-align:center;
+padding:12px;
+font-weight:800;
+display:none;
+}
 
 /* SECTION */
-.section{padding:70px 20px;max-width:1200px;margin:auto}
+.section{padding:70px 20px;max-width:1100px;margin:auto}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-
-/* CARDS */
 .card{background:var(--card);padding:20px;border-radius:14px}
 
-/* GALLERY */
-.img-box{position:relative;overflow:hidden;border-radius:14px}
-.img-box img{width:100%;height:240px;object-fit:cover}
-.badge{
-position:absolute;bottom:10px;left:10px;
-background:rgba(0,0,0,.7);padding:8px 12px;border-radius:10px;font-size:13px
-}
-
-/* PRICES */
-.price-card{background:var(--card);padding:20px;border-radius:16px;text-align:center}
-.price-card b{font-size:22px;color:var(--green)}
-
-/* PACKAGES */
-.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.popular{border:2px solid var(--green);transform:scale(1.05)}
-
-/* FLOAT */
-.call{position:fixed;right:20px;bottom:20px;background:var(--green);color:#000;padding:14px;border-radius:12px;text-decoration:none}
-.whatsapp{position:fixed;right:20px;bottom:80px;background:#25D366;padding:14px;border-radius:50%;text-decoration:none}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- HERO PRO -->
 <section class="hero">
-<h1>Instalator Chișinău 24/7</h1>
-<p>Rapid • Corect • Fără surprize</p>
 
-<a href="tel:+37368129925" class="btn">📞 Sună ACUM</a>
+<h1>Instalator Chișinău care rezolvă din prima</h1>
+
+<p>Ajung în 30–60 min • fără surprize la preț • lucrez curat</p>
+
+<a href="tel:+37368129925" class="btn"
+onclick="gtag('event','conversion');">
+📞 Sună ACUM
+</a>
+
+<a href="https://wa.me/37368129925?text=Salut,%20am%20o%20problemă%20la%20instalații"
+class="btn2">💬 Scrie pe WhatsApp</a>
+
 <div class="phone">📞 068 12 99 25</div>
 
-<p style="color:#22c55e;font-weight:700">⚡ Locuri limitate azi</p>
+<div class="trust">🟢 Activ acum • răspund imediat</div>
+<div class="trust">⚡ Program aproape plin azi</div>
+
 </section>
 
-<!-- GALERIE -->
+<!-- BENEFICII -->
 <section class="section">
-<h2>Lucrări reale</h2>
+<h2>De ce mă aleg clienții</h2>
 <div class="grid">
-
-<div class="img-box"><img src="lucrare6.jpg"><div class="badge">✔ Complex • de la 1200 lei</div></div>
-<div class="img-box"><img src="lucrare1.jpg"><div class="badge">✔ Instalație • de la 600 lei</div></div>
-<div class="img-box"><img src="lucrare2.jpg"><div class="badge">⚡ Rapid • de la 250 lei</div></div>
-<div class="img-box"><img src="lucrare3.jpg"><div class="badge">🔧 Reparație • de la 300 lei</div></div>
-<div class="img-box"><img src="lucrare-2.jpg"><div class="badge">✔ Finalizat • de la 300 lei</div></div>
-<div class="img-box"><img src="lucrare-3.jpg"><div class="badge">💰 Corect • de la 300 lei</div></div>
-<div class="img-box"><img src="lucrare-4.jpg"><div class="badge">✔ Calitate • de la 300 lei</div></div>
-<div class="img-box"><img src="baie1.jpg"><div class="badge">🛁 Baie • de la 800 lei</div></div>
-<div class="img-box"><img src="boiler1.jpg"><div class="badge">🔥 Boiler • de la 500 lei</div></div>
-<div class="img-box"><img src="reparatie1.jpg"><div class="badge">⚡ Urgent • de la 250 lei</div></div>
-<div class="img-box"><img src="teava1.jpg"><div class="badge">🔧 Țevi • de la 200 lei</div></div>
-
+<div class="card">✔ Ajung rapid în Chișinău</div>
+<div class="card">✔ Spun prețul înainte</div>
+<div class="card">✔ Lucrez curat și corect</div>
+<div class="card">✔ Garanție</div>
 </div>
 </section>
 
-<!-- PRETURI LUCRARI -->
+<!-- PRETURI -->
 <section class="section">
-<h2>Prețuri lucrări instalații sanitare</h2>
-
+<h2>Prețuri orientative</h2>
 <div class="grid">
-
-<div class="price-card">Desfundare țevi<br><b>de la 200 lei</b></div>
-<div class="price-card">Montaj boiler<br><b>de la 500 lei</b></div>
-<div class="price-card">Reparație scurgeri<br><b>de la 250 lei</b></div>
-<div class="price-card">Montaj robinet / baterie<br><b>de la 200 lei</b></div>
-<div class="price-card">Montaj WC / chiuvetă<br><b>de la 400 lei</b></div>
-<div class="price-card">Instalație baie completă<br><b>de la 1200 lei</b></div>
-
-</div>
-
-<p style="opacity:.6;margin-top:10px">Prețul exact se stabilește după evaluare</p>
-</section>
-
-<!-- PACHETE -->
-<section class="section">
-<h2>Pachete intervenție</h2>
-
-<div class="packages">
-
-<div class="price-card">
-<h3>Standard</h3>
-<p>Program normal</p>
-<b>de la 300 lei</b>
-</div>
-
-<div class="price-card popular">
-<h3>Urgent ⭐</h3>
-<p>Ajung rapid 30–60 min</p>
-<b>de la 500 lei</b>
-</div>
-
-<div class="price-card">
-<h3>Premium</h3>
-<p>Intervenție imediată</p>
-<b>de la 800 lei</b>
-</div>
-
+<div class="card">Desfundare țevi<br><b>de la 200 lei</b></div>
+<div class="card">Montaj boiler<br><b>de la 500 lei</b></div>
+<div class="card">Reparații<br><b>de la 250 lei</b></div>
+<div class="card">Instalații<br><b>de la 300 lei</b></div>
 </div>
 </section>
 
-<!-- REVIEW -->
-<section class="section">
-<h2>Clienți</h2>
-<div class="grid">
-<div class="card">„A venit în 30 min și a rezolvat imediat.”</div>
-<div class="card">„Preț spus din start. Foarte corect.”</div>
-<div class="card">„Recomand, lucrează curat.”</div>
-</div>
+<!-- CTA FINAL -->
+<section class="section" style="text-align:center">
+<h2>Ai nevoie de instalator acum?</h2>
+<a href="tel:+37368129925" class="btn">📞 Sună ACUM</a>
 </section>
 
-<!-- MAP -->
-<section class="section">
-<iframe src="https://www.google.com/maps?q=Chișinău&output=embed" width="100%" height="300" style="border:0;border-radius:12px"></iframe>
-</section>
-
+<!-- FLOAT -->
 <a href="tel:+37368129925" class="call">📞</a>
 <a href="https://wa.me/37368129925" class="whatsapp">💬</a>
+
+<!-- POPUP -->
+<div id="popup">⚡ Sună acum: 068 12 99 25</div>
+
+<script>
+setTimeout(()=>{
+document.getElementById('popup').style.display='block';
+},5000);
+</script>
 
 </body>
 </html>
