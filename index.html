@@ -11,7 +11,20 @@
 <style>
 body{margin:0;font-family:'Inter',sans-serif;background:#020617;color:#fff}
 
-/* HERO MODERN */
+/* TOP BAR */
+.topbar{
+position:fixed;
+top:0;
+width:100%;
+background:#22c55e;
+color:#000;
+text-align:center;
+padding:8px;
+font-weight:700;
+z-index:999;
+}
+
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -19,12 +32,19 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding-top:50px;
 background:
 linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
 url('lucrare6.jpg') center/cover;
+animation:fade 1.2s ease;
 }
 
-h1{font-size:50px;max-width:800px}
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+h1{font-size:46px;max-width:800px}
 .subtitle{opacity:.8;margin-top:10px}
 
 .btn{
@@ -37,9 +57,18 @@ font-weight:800;
 margin-top:20px;
 display:inline-block;
 box-shadow:0 0 20px #22c55e55;
+transition:.3s;
 }
+.btn:hover{transform:scale(1.05)}
 
 .phone{color:#22c55e;font-size:22px;margin-top:10px;font-weight:700}
+
+/* TIMER */
+.timer{
+margin-top:10px;
+font-size:14px;
+opacity:.8;
+}
 
 /* SECTION */
 .section{padding:70px 20px;max-width:1200px;margin:auto}
@@ -77,13 +106,44 @@ transition:.3s;
 
 .card b{color:#22c55e;font-size:22px}
 
+/* MAP */
+.map iframe{
+border-radius:16px;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
 /* FLOAT */
-.call{position:fixed;right:20px;bottom:20px;background:#22c55e;color:#000;padding:14px;border-radius:12px;text-decoration:none;font-weight:800}
-.whatsapp{position:fixed;right:20px;bottom:80px;background:#25D366;padding:14px;border-radius:50%;text-decoration:none}
+.call{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#22c55e;
+color:#000;
+padding:16px;
+border-radius:12px;
+text-decoration:none;
+font-weight:800;
+box-shadow:0 0 15px #22c55e;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:80px;
+background:#25D366;
+padding:16px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 0 15px #25D366;
+}
 </style>
 </head>
 
 <body>
+
+<div class="topbar">
+📞 Sună acum: 068 12 99 25 • Răspund imediat
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -93,17 +153,18 @@ transition:.3s;
 <a href="tel:+37368129925" class="btn">📞 Sună ACUM</a>
 <div class="phone">📞 068 12 99 25</div>
 
+<div class="timer">⏳ Loc liber în următoarele <span id="count">15</span> minute</div>
+
 <p style="color:#22c55e;font-weight:700;margin-top:10px;">
-🟢 Activ acum • locuri limitate azi
+🟢 Activ acum • intervenții azi
 </p>
 </section>
 
-<!-- GALERIE COMPLETĂ -->
+<!-- GALERIE -->
 <section class="section">
 <h2>Lucrări reale</h2>
 
 <div class="grid">
-
 <div class="img-box"><img src="lucrare6.jpg"><div class="badge">✔ Complex • de la 1200 lei</div></div>
 <div class="img-box"><img src="lucrare1.jpg"><div class="badge">✔ Instalație • de la 600 lei</div></div>
 <div class="img-box"><img src="lucrare2.jpg"><div class="badge">⚡ Rapid • de la 250 lei</div></div>
@@ -117,33 +178,66 @@ transition:.3s;
 <div class="img-box"><img src="boiler1.jpg"><div class="badge">🔥 Boiler • de la 500 lei</div></div>
 <div class="img-box"><img src="reparatie1.jpg"><div class="badge">⚡ Urgent • de la 250 lei</div></div>
 <div class="img-box"><img src="teava1.jpg"><div class="badge">🔧 Țevi • de la 200 lei</div></div>
-
 </div>
 </section>
 
-<!-- PRETURI COMPLETE -->
+<!-- PRETURI -->
 <section class="section">
 <h2>Prețuri instalații sanitare</h2>
 
 <div class="grid">
-
 <div class="card">Desfundare țevi<br><b>de la 200 lei</b></div>
 <div class="card">Montaj boiler<br><b>de la 500 lei</b></div>
 <div class="card">Reparație scurgeri<br><b>de la 250 lei</b></div>
-<div class="card">Montaj robinet / baterie<br><b>de la 200 lei</b></div>
+<div class="card">Montaj robinet<br><b>de la 200 lei</b></div>
 <div class="card">Montaj WC / chiuvetă<br><b>de la 400 lei</b></div>
-<div class="card">Instalație baie completă<br><b>de la 1200 lei</b></div>
-
+<div class="card">Instalație completă<br><b>de la 1200 lei</b></div>
 </div>
 
-<p style="opacity:.6;margin-top:10px">
+<p style="opacity:.6;margin-top:10px;text-align:center">
 Prețul exact se stabilește după evaluare
+</p>
+</section>
+
+<!-- GOOGLE MAP -->
+<section class="section map">
+<h2>Zona de intervenție</h2>
+
+<iframe 
+src="https://www.google.com/maps?q=Chișinău&output=embed" 
+width="100%" 
+height="400" 
+style="border:0;"
+loading="lazy">
+</iframe>
+
+<p style="opacity:.7;margin-top:10px;text-align:center">
+Intervenim rapid în tot Chișinău și suburbii
 </p>
 </section>
 
 <!-- FLOAT -->
 <a href="tel:+37368129925" class="call">📞</a>
-<a href="https://wa.me/37368129925" class="whatsapp">💬</a>
+
+<a href="https://wa.me/37368129925?text=Salut,%20am%20o%20problemă%20la%20instalații.%20poți%20veni%20rapid?"
+class="whatsapp">💬</a>
+
+<script>
+// TIMER
+let t=15;
+setInterval(()=>{
+t--;
+if(t<1)t=15;
+document.getElementById('count').innerText=t;
+},60000);
+
+// TRACKING
+document.querySelectorAll('a[href^="tel"]').forEach(btn=>{
+btn.addEventListener('click',()=>{
+console.log("apel trimis");
+});
+});
+</script>
 
 </body>
 </html>
